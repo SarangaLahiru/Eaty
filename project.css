@@ -1,0 +1,773 @@
+::-webkit-scrollbar{
+    background-color: rgba(165, 115, 221, 0.514);
+    
+   
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(138, 81, 204);
+    border-radius: 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    
+    
+}
+header #talk{
+    
+    background:linear-gradient(to top left,rgb(255, 167, 4),rgba(255, 255, 255, 0.938));
+    padding: 10px 15px;
+    color: black;
+    border-radius: 10px;
+    margin: 100px;
+    box-shadow: 0px 0px 20px rgb(64, 23, 83);
+    border: 1px rgb(219, 216, 216) solid;
+   
+
+}
+header #talk:hover{
+    background:orange;
+}
+header h2{
+    flex-basis: 20%;
+    margin-left: 60px;
+}
+header li{
+    list-style: none;
+    margin: 0px 17px;
+}
+header a{
+    text-decoration: none;
+    color: rgb(204, 204, 203);
+}
+.slider img{
+    width: 50%;
+}
+.slider .slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+    z-index: -1;
+}
+.slider .slide{
+   
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transform: scale(0.8);
+    background: linear-gradient(to left top ,white,rgb(228, 176, 99),rgb(141, 65, 212),rgb(127, 42, 207),rgb(240, 235, 235));
+}
+.slider .curr{
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}
+.slider .s1{
+    z-index: 100;
+    
+}
+.slider .dis{
+    position: absolute;
+    top: 30vh;
+    left: 80px;
+}
+.slider .dis h2{
+    font-size: 65px;
+    width: 450px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+    color: rgb(230, 233, 235);
+}
+.slider .dis span{
+    color: rgb(243, 180, 62);
+}
+.slider .dis p{
+    width: 400px;
+    line-height: 2em;
+    margin-top: 20px;
+    color: rgb(181, 187, 187);
+}
+.slider #ex{
+    padding: 10px 15px;
+    box-shadow: 0px 0px 20px rgb(64, 23, 83);
+    border: 1px rgb(243, 209, 136) solid;
+    background:linear-gradient(to top left,rgb(255, 167, 4),rgba(255, 255, 255, 0.938));
+    border-radius: 13px;
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    color: black;
+}
+.slider #ex:hover{
+    background:orange;
+}
+.slider #watch{
+    position: relative;
+    top: 50px;
+    margin: 0px 135px;
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(220, 223, 226);
+    
+}
+.slider .s1 img{
+    position:absolute;
+    right:110px;
+    top: 25vh;
+    transform: scale(1.3);
+    
+}
+.slider .dis i{
+    color: rgb(238, 181, 75);
+    background-color: aliceblue;
+    padding: 12px 16px;
+    border-radius: 50px;
+   
+}
+.slider input[type="radio"]{
+    display: none;
+}
+
+.slider .radb{
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 95vh;
+    left: 50%;
+
+}
+.slider .rad-btn{
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgb(243, 242, 242);
+    margin: 10px 15px;
+    border-radius: 10px;
+    
+}
+.slider .radb .active{
+    background-color: aliceblue;
+}
+
+.arr{
+    position: relative;
+    top: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arr .arrow{
+    position:absolute;
+    font-size: 40px;
+    color: aliceblue;
+    
+}
+.arr .arrow:hover{
+    color: black;
+}
+.arr .arrow:active{
+    color: rgb(104, 97, 97);
+}
+.arr a{
+    text-decoration: none;
+}
+.arr .left{
+    left: 50px;
+}
+.arr .right{
+    right: 50px;
+}
+
+
+.sponser{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 100vh;
+    z-index: -10;
+    background: linear-gradient(to top left,rgba(203, 146, 226, 0.747),rgba(198, 172, 206, 0.781),rgb(216, 214, 214));
+}
+
+.services{
+    position: absolute;
+    top:120vh;
+    height: 190px;
+    left: -50px;
+      
+}
+
+.services .services1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin-left: 130px;
+   border-radius: 20px;
+   border: 12px solid rgb(240, 237, 237);
+   box-shadow: 0px 0px 20px rgb(133, 127, 127);
+    background: linear-gradient(to left top,rgb(89, 19, 129),rgb(97, 23, 158),rgb(178, 132, 209));
+}
+.services h2{
+    line-height: 2.6em;
+    color: rgb(227, 230, 233);
+    font-size: 20px;
+    text-align: center;
+}
+.services p{
+   color: rgb(155, 152, 149);
+   margin-left: 5px;
+   margin: 0px 25px;
+}
+.services .services1 .service{
+    width: 25%;
+    line-height: 1.6em;
+    padding: 70px 15px;
+   
+    
+    
+}
+.services1{
+    overflow-wrap: hidden;
+    height: 250px;
+    
+    
+}
+.services .service:hover{
+    background: linear-gradient(to top left,orange,rgb(241, 213, 153));
+    position: relative;
+    transform: translateY(-40px);
+    height: 190px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+.service a{
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    color: black;
+    left: 80px;
+    display: none;
+}
+.services .service:hover  a{
+    display: block;
+}
+.services .service:hover  h2{
+    color: black;
+}
+.services .service:hover  p{
+    color: rgb(58, 55, 55);
+}
+.service{
+    transition: all 0.3s ease-in;
+}
+.services >h2{
+    color: rgb(124, 40, 202);
+    font-size: 28px;
+    margin: 60px 0px;
+    margin-left: -690px;
+    
+
+    
+}
+.services > h2 #king{
+    color: rgb(240, 185, 83);
+    font-size: 35px;
+    background:linear-gradient(to top left,rgb(104, 12, 146),rgb(221, 199, 241)) ;
+    padding: 10px 11px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 10px rgb(198, 169, 218);
+}
+.service > i{
+    color: rgb(238, 182, 77);
+    margin:  10px 100px;
+    font-size: 35px;
+    background-color: rgb(103, 45, 150);
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(168, 163, 163);
+}
+.service:hover > i{
+    background: linear-gradient(to top left,rgb(197, 132, 10),rgb(231, 185, 116));
+   border: 1px solid rgb(233, 209, 177);
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -130px;
+    position: relative;
+}
+.line p{
+    margin-left: 20px;
+
+}
+.line .v2{
+     
+    width: 240px;
+    height: 50px;
+    background-color: rgb(245, 242, 240);
+    padding: 60px 23px;
+    margin: 80px 45px;
+    border-radius: 20px;
+    border: 2px solid rgb(228, 223, 223);
+    box-shadow: 0px 0px 15px rgb(238, 234, 235);
+    transition: all 0.5s ease-in;
+}
+.line i{
+    
+    position: absolute;
+    top: 60px;
+    font-size: 30px;
+}
+
+.box1{
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top: 210vh;
+}
+
+.box1 img{
+    width: 120%;
+    position: relative;
+    left: -100px;
+    z-index: 10;
+    top: -107px;
+}
+.box1 .s1::after{
+    content: '';
+    background: linear-gradient(to top left,rgb(90, 70, 206),rgb(197, 213, 236));
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 90px;
+    top:28px;
+    box-shadow: 0px 0px 50px rgb(198, 160, 209);
+    border: 15px solid rgb(245, 242, 242);
+}
+
+.box1 .value1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+.value1 .v1{
+    
+    width: 240px;
+    height: 50px;
+    background-color: rgb(245, 242, 240);
+    padding: 60px 23px;
+    margin: 80px 45px;
+    border-radius: 20px;
+    border: 2px solid rgb(228, 223, 223);
+    box-shadow: 0px 0px 15px rgb(238, 234, 235);
+    transition: all 0.5s ease-in;
+
+}
+.value1 .v1:hover{
+    background-color: rgb(250, 240, 224);
+    border: 2px solid rgb(245, 212, 191);
+    
+}
+.line .v2:hover{
+    background-color: rgb(250, 240, 224);
+    border: 2px solid rgb(245, 212, 191);
+    
+    
+}
+
+.value1 .part1 h3:hover #chart{
+    background-color: orange;
+} 
+.box1 .s2 h2{
+    color: rgb(103, 30, 170);
+    font-size: 28px;
+    font-weight: 900;
+}
+.box1 .s2 i{
+    color: rgb(240, 189, 95);
+    background: linear-gradient(to left top,rgb(116, 25, 168),rgb(222, 188, 238));
+    padding: 10px 10px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgb(220, 191, 240);
+
+}   
+.box1 p{
+    margin-left:50px ;
+    margin-top: 10px;
+    color: rgb(128, 125, 123);
+}
+.box1 #chart{
+    position: absolute;
+    top: 150px;
+    font-size: 30px;
+}
+.box1 #battery{
+    position: absolute;
+    top: 150px;
+    font-size: 30px;
+}
+
+.box1 h3{
+    color: blueviolet;
+}
+.menu{
+    position: absolute;
+    top:300vh;
+    display: flex;
+    flex-direction: column;
+    left: 70px;
+   
+}
+.menu .box-1{
+    margin: 15px 45px;
+    line-height: 1.8em;
+    width: 500px;
+    
+
+}
+.menu .box-2{
+    margin: 10px 55px;
+    
+
+}
+.menu .arrpi{
+    position: absolute;
+    right: -500px;
+    top: 50px;
+}
+.menu .arrowpi{
+    font-size: 40px;
+    margin: 10px 15px;
+    color: rgb(184, 149, 218);
+}
+.menu .arrowpi:hover{
+    color: rgb(58, 57, 57);
+}
+.menu .arrpi a{
+    text-decoration: none;
+}
+.menu .recipe  .pi img{
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+.menu .recipe .box {
+    
+    width: 600px;
+    height: 400px;
+    
+    position: absolute;
+    overflow: hidden;
+   
+    left: 100%;
+    z-index: 100;
+    top: 120px;
+    
+    opacity: 0;
+    
+    
+
+}
+.menu .recipe .pi{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+
+
+
+
+.menu .box-3{
+    margin: 10px 55px;
+    
+
+}
+.menu .box-4{
+    margin: 10px 55px;
+    
+
+}
+.menu .box-5{
+    margin: 10px 55px;
+    
+
+}
+.box-1 h2{
+    color: blueviolet;
+    font-size: 30px;
+}
+.box-1 p{
+    color: rgb(140, 136, 143);
+}
+.box-1 h2 i{
+    background: linear-gradient(to top left,rgb(149, 76, 209),rgb(229, 201, 245));
+   box-shadow: 0px 0px 10px rgb(213, 168, 240);
+   padding: 10px 15px;
+   border-radius: 10px;
+   color: rgb(247, 209, 127);
+
+}
+
+.menu .r1{
+    background-color: rgb(247, 241, 252);
+    width: 300px;
+    padding: 19px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 80px ;
+    border: 2px rgb(247, 236, 230) solid;
+    color: rgb(182, 124, 236);
+    
+}
+.menu .r1::before{
+    
+    content: '';
+    width: 5px;
+    height: 90px;
+    background-color: rgb(231, 221, 235);
+    position: absolute;
+    left: 520px;
+    margin-top: -30px;
+    border-radius: 1px;
+
+}
+.menu .r1 i{
+    position: absolute;
+    left: 100px;
+    margin-top: -5px;
+    color: aliceblue;
+    background:linear-gradient(to top left,rgb(141, 73, 204),rgb(215, 180, 243)) ;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+.menu .bt i{
+    background: linear-gradient(to top left,orange,rgb(248, 197, 155));
+   box-shadow: 0px 0px 10px rgb(184, 129, 29);
+}
+.menu .bt::before{
+    background-color: rgb(169, 112, 223);
+}
+.menu .bt{
+    background-color: rgb(248, 241, 235);
+    box-shadow: 0px 0px 10px rgb(219, 201, 231);
+    color: rgb(148, 44, 245);
+    transition: all 0.5s ease-in;
+}
+
+
+
+.container{
+    position: absolute;
+    top: 400vh;
+}
+.container img{
+    width: 50%;
+    margin-left: -150px;
+    
+}
+.container .img1{
+    position: relative;
+}
+.container .img1::after{
+    content: '';
+    width: 300px;
+    height: 400px;
+    background:linear-gradient(to top left,rgb(98, 18, 163),rgb(221, 197, 243));
+    position: absolute;
+    left: 160px;
+    top: 40px;
+    z-index: -1;
+    border: 10px rgb(241, 237, 237) solid;
+    box-shadow: 0px 0px 50px rgb(215, 167, 230);
+}
+
+.container .test{
+    position: absolute;
+    right: 200px;
+    top: 50px;
+    
+}
+.container  #head{
+    width: 500px;
+    color: rgb(143, 141, 138);
+    margin-left: -90px;
+}
+.container .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .text .msg{
+    width: 300px;
+    margin: 50px 5px;
+}
+.container #head h2{
+    color: blueviolet;
+    font-size: 30px;
+}
+.container #head i{
+    color: rgb(248, 181, 56);
+    background:linear-gradient(to top left,rgb(158, 48, 192),rgb(196, 152, 236));
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(205, 153, 226);
+}
+.container .msg i{
+    color: rgb(243, 241, 238);
+    background:linear-gradient(to top left,rgb(158, 48, 192),rgb(196, 152, 236));
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(205, 153, 226);
+    position: relative;
+    top:-25px;
+}
+.container .text .msg{
+    background-color: rgb(226, 214, 231);
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(199, 196, 196);
+    position: absolute;
+    top: 110px;
+    padding: 15px 15px;
+    left: -30px;
+    
+    transform: rotatex(90deg);
+}
+.container .text .curr2{
+    transform: rotatex(0deg);
+    transition: all 0.5s ease-in;
+    transform: rotate(0deg);
+    
+}
+
+.container .text .arrow1{
+    text-decoration: none;
+    color: rgb(194, 191, 186);
+    font-size: 40px;
+    position: absolute;
+    top: 300px;
+    left: 350px;
+}
+.container .arrow1:hover{
+    color: rgb(105, 102, 102);
+}
+.container .text .right1{
+    left: 400px;
+}
+
+.container .text .msg:hover{
+    background-color: rgb(183, 140, 223);
+    box-shadow: 0px 0px 10px rgb(116, 34, 133);
+}
+
+
+.started{
+    position: absolute;
+    top:490vh;
+    background:linear-gradient(to top left,rgb(80, 23, 128),rgb(196, 146, 230));
+    border-radius: 20px;
+    border: 10px solid rgb(219, 215, 215);
+    width: 80%;
+    left: 130px;
+    height: 150px;
+    box-shadow: 0px 0px 20px rgb(141, 128, 146);
+}
+.started h2{
+    text-align: center;
+    color: aliceblue;
+    font-weight: 900;
+    margin: 25px 10px;
+}
+.started span{
+    color: rgb(241, 180, 67);
+}
+.started p{
+    text-align: center;
+    color: rgb(213, 194, 231);
+}
+.started a{
+    position: absolute;
+    left: 490px;
+    top: 110px;
+    text-decoration: none;
+    background:linear-gradient(to top left,orange,rgb(235, 203, 167));
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+.started a:hover{
+    background-color: rgb(129, 90, 16);
+    box-shadow: 0px 0px 20px rgb(54, 43, 28);
+}
+
+
+footer{
+    display: flex;
+    
+    justify-content: space-around;
+    position: absolute;
+    top: 530vh;
+    width: 100%;
+    height: 400px;
+    line-height: 4em;
+    box-shadow: 0px 0px 20px rgb(161, 85, 233);
+    background:linear-gradient(to top left,rgb(182, 138, 202),rgb(239, 227, 243));
+}
+footer a{
+    text-decoration: none;
+}
+footer .boxx{
+    width: 250px;
+    
+}
+footer .boxx p{
+    line-height: 2.5em;
+}
+
+
+
+
+
+
+@media(max-width:1240px){
+    .services{
+        transform: scale(0.5);
+        left: -200px;
+        transition: 0.5s ease-in;
+       
+    }
+}
+@media(max-width:730px){
+    .services{
+        transform: scale(0.6);
+        
+       left: -330px;
+        transition: 0.5s ease-in;
+        
+        flex-direction: column;
+    }
+}
+
+
